@@ -7,6 +7,8 @@ body { margin: 0; background: var(--shell); color: var(--ink); font: 22px/1.25 B
 a { color: var(--navy); }
 .wrap { max-width: 980px; margin: auto; padding: 28px 22px 60px; }
 nav { display: flex; gap: 18px; align-items: center; font: 10px D, monospace; } nav .sp { flex: 1; } nav a { text-decoration: none; }
+nav a, footer a { min-height: 44px; display: inline-flex; align-items: center; }
+a:focus-visible { outline: 3px solid var(--navy); outline-offset: 4px; }
 .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 34px; align-items: center; margin: 46px 0 40px; }
 @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
 h1 { font: 26px/1.45 D, monospace; margin: 0 0 18px; } h2 { font: 14px/1.5 D, monospace; margin: 40px 0 14px; } h3 { font: 10px/1.5 D, monospace; margin: 22px 0 8px; }
@@ -20,5 +22,6 @@ h1 { font: 26px/1.45 D, monospace; margin: 0 0 18px; } h2 { font: 14px/1.5 D, mo
 form { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
 input { font: 22px B, monospace; padding: 12px; border: 3px solid var(--ink); background: var(--paper); min-width: 240px; flex: 1; }
 footer { margin-top: 60px; font: 9px D, monospace; color: var(--mid); display: flex; gap: 16px; flex-wrap: wrap; }
-.legal p, .legal li { max-width: 760px; }
+.legal { font: 17px/1.65 system-ui, sans-serif; }
+.legal p, .legal li { max-width: 760px; overflow-wrap: anywhere; }
 .legal h1 { margin-top: 36px; }

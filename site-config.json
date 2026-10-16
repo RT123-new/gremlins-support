@@ -1,9 +1,9 @@
 {
   "legalEntity": "Reginald Troka",
   "legalAddress": "",
-  "supportEmail": "",
-  "privacyEmail": "",
-  "supportUrl": "https://github.com/RT123-new/curbies-support/issues",
-  "siteUrl": "https://rt123-new.github.io/curbies-support/",
+  "supportEmail": "info@curbies.app",
+  "privacyEmail": "info@curbies.app",
+  "supportUrl": "https://curbies.app/support/",
+  "siteUrl": "https://curbies.app/",
   "hostingProvider": "GitHub Pages"
 }

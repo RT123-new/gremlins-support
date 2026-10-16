@@ -20,8 +20,11 @@
     const supportUrl = httpsUrl(config.supportUrl);
     for (const node of document.querySelectorAll("[data-support-link], [data-privacy-link]")) {
       const address = node.hasAttribute("data-privacy-link") ? privacyEmail : supportEmail;
-      if (address) { node.href = `mailto:${address}`; node.textContent = address; }
-      else if (supportUrl) { node.href = supportUrl; }
+      if (address) {
+        const q = node.href.startsWith("mailto:") ? node.href.indexOf("?") : -1;
+        node.href = `mailto:${address}${q >= 0 ? node.href.slice(q) : ""}`;
+        if (node.hasAttribute("data-show-address")) node.textContent = address;
+      } else if (supportUrl) { node.href = supportUrl; }
     }
   }).catch(() => { /* The static contact links remain available. */ });
 })();
